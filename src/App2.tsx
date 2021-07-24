@@ -1,5 +1,5 @@
 import React from 'react';
-import { useAppDispatch, useAppSelector } from './state/hook';
+import { useAppDispatch, useAppSelector } from './state/hooks';
 import { setMyLove } from './state/mylove';
 
 function App2(): React.ReactElement {
