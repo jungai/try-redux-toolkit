@@ -2,13 +2,13 @@ import React from 'react';
 import { useAppDispatch, useAppSelector } from './state/hook';
 import { setMyLove } from './state/mylove';
 
-function App(): React.ReactElement {
+function App2(): React.ReactElement {
 	const myLove = useAppSelector((state) => state.myLove.name);
 	const dispatch = useAppDispatch();
 
 	return (
 		<div>
-			<h1>Hello Redux Toolkit App1</h1>
+			<h1>Hello Redux Toolkit App2</h1>
 			<p>My love is {myLove}</p>
 			<button onClick={() => dispatch(setMyLove('rose'))}>
 				change my love
@@ -17,4 +17,4 @@ function App(): React.ReactElement {
 	);
 }
 
-export default App;
+export default App2;
