@@ -7,13 +7,15 @@ specifiers:
   '@vitejs/plugin-react-refresh': ^1.3.1
   react: ^17.0.0
   react-dom: ^17.0.0
+  react-redux: ^7.2.4
   typescript: ^4.3.2
   vite: ^2.4.2
 
 dependencies:
-  '@reduxjs/toolkit': 1.6.1_react@17.0.2
+  '@reduxjs/toolkit': 1.6.1_react-redux@7.2.4+react@17.0.2
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
+  react-redux: 7.2.4_react-dom@17.0.2+react@17.0.2
 
 devDependencies:
   '@types/react': 17.0.14
@@ -269,7 +271,7 @@ packages:
       to-fast-properties: 2.0.0
     dev: true
 
-  /@reduxjs/toolkit/1.6.1_react@17.0.2:
+  /@reduxjs/toolkit/1.6.1_react-redux@7.2.4+react@17.0.2:
     resolution: {integrity: sha512-pa3nqclCJaZPAyBhruQtiRwtTjottRrVJqziVZcWzI73i6L3miLTtUyWfauwv08HWtiXLx1xGyGt+yLFfW/d0A==}
     peerDependencies:
       react: ^16.14.0 || ^17.0.0
@@ -282,6 +284,7 @@ packages:
     dependencies:
       immer: 9.0.5
       react: 17.0.2
+      react-redux: 7.2.4_react-dom@17.0.2+react@17.0.2
       redux: 4.1.0
       redux-thunk: 2.3.0
       reselect: 4.0.0
@@ -295,9 +298,15 @@ packages:
       picomatch: 2.3.0
     dev: true
 
+  /@types/hoist-non-react-statics/3.3.1:
+    resolution: {integrity: sha512-iMIqiko6ooLrTh1joXodJK5X9xeEALT1kM5G3ZLhD3hszxBdIEd5C75U834D9mLcINgD4OyZf5uQXjkuYydWvA==}
+    dependencies:
+      '@types/react': 17.0.14
+      hoist-non-react-statics: 3.3.2
+    dev: false
+
   /@types/prop-types/15.7.4:
     resolution: {integrity: sha512-rZ5drC/jWjrArrS8BR6SIr4cWpW09RNTYt9AMZo3Jwwif+iacXAqgVjm0B0Bv/S1jhDXKHqRVNCbACkJ89RAnQ==}
-    dev: true
 
   /@types/react-dom/17.0.9:
     resolution: {integrity: sha512-wIvGxLfgpVDSAMH5utdL9Ngm5Owu0VsGmldro3ORLXV8CShrL8awVj06NuEXFQ5xyaYfdca7Sgbk/50Ri1GdPg==}
@@ -305,17 +314,24 @@ packages:
       '@types/react': 17.0.14
     dev: true
 
+  /@types/react-redux/7.1.18:
+    resolution: {integrity: sha512-9iwAsPyJ9DLTRH+OFeIrm9cAbIj1i2ANL3sKQFATqnPWRbg+jEFXyZOKHiQK/N86pNRXbb4HRxAxo0SIX1XwzQ==}
+    dependencies:
+      '@types/hoist-non-react-statics': 3.3.1
+      '@types/react': 17.0.14
+      hoist-non-react-statics: 3.3.2
+      redux: 4.1.0
+    dev: false
+
   /@types/react/17.0.14:
     resolution: {integrity: sha512-0WwKHUbWuQWOce61UexYuWTGuGY/8JvtUe/dtQ6lR4sZ3UiylHotJeWpf3ArP9+DSGUoLY3wbU59VyMrJps5VQ==}
     dependencies:
       '@types/prop-types': 15.7.4
       '@types/scheduler': 0.16.2
       csstype: 3.0.8
-    dev: true
 
   /@types/scheduler/0.16.2:
     resolution: {integrity: sha512-hppQEBDmlwhFAXKJX2KnWLYu5yMfi91yazPb2l+lbJiwW+wdo1gNeRA+3RgNSO39WYX2euey41KEwnqesU2Jew==}
-    dev: true
 
   /@vitejs/plugin-react-refresh/1.3.5:
     resolution: {integrity: sha512-7c4ELQMygKw5YFCNMLhDHrt4BOgXmROP65gPax/W43mJPNQaYW8ny1kI/bvCDNuzMqZWSK8uf2tEjPVVBnZ5IQ==}
@@ -384,7 +400,6 @@ packages:
 
   /csstype/3.0.8:
     resolution: {integrity: sha512-jXKhWqXPmlUeoQnF/EhTtTl4C9SnrxSH/jZUih3jmO6lBKr99rP3/+FmrMj4EFpOXzMtXHAZkd3x0E6h6Fgflw==}
-    dev: true
 
   /debug/4.3.2:
     resolution: {integrity: sha512-mOp8wKcvj7XxC78zLgw/ZA+6TSgkoE2C/ienthhRD298T7UNwAg9diBpLRxC0mOezLl4B0xV7M0cCO6P/O0Xhw==}
@@ -454,6 +469,12 @@ packages:
     dependencies:
       function-bind: 1.1.1
     dev: true
+
+  /hoist-non-react-statics/3.3.2:
+    resolution: {integrity: sha512-/gGivxi8JPKWNm/W0jSmzcMPpfpPLc3dY/6GxhX2hQ9iGj3aDfklV4ET7NjKpSinLpJ5vafa9iiGIEZg10SfBw==}
+    dependencies:
+      react-is: 16.13.1
+    dev: false
 
   /immer/9.0.5:
     resolution: {integrity: sha512-2WuIehr2y4lmYz9gaQzetPR2ECniCifk4ORaQbU3g5EalLt+0IVTosEPJ5BoYl/75ky2mivzdRzV8wWgQGOSYQ==}
@@ -530,6 +551,14 @@ packages:
       source-map-js: 0.6.2
     dev: true
 
+  /prop-types/15.7.2:
+    resolution: {integrity: sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ==}
+    dependencies:
+      loose-envify: 1.4.0
+      object-assign: 4.1.1
+      react-is: 16.13.1
+    dev: false
+
   /react-dom/17.0.2_react@17.0.2:
     resolution: {integrity: sha512-s4h96KtLDUQlsENhMn1ar8t2bEa+q/YAtj8pPPdIjPDGBDIVNsrD9aXNWqspUe6AzKCIG0C1HZZLqLV7qpOBGA==}
     peerDependencies:
@@ -539,6 +568,32 @@ packages:
       object-assign: 4.1.1
       react: 17.0.2
       scheduler: 0.20.2
+    dev: false
+
+  /react-is/16.13.1:
+    resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
+    dev: false
+
+  /react-redux/7.2.4_react-dom@17.0.2+react@17.0.2:
+    resolution: {integrity: sha512-hOQ5eOSkEJEXdpIKbnRyl04LhaWabkDPV+Ix97wqQX3T3d2NQ8DUblNXXtNMavc7DpswyQM6xfaN4HQDKNY2JA==}
+    peerDependencies:
+      react: ^16.8.3 || ^17
+      react-dom: '*'
+      react-native: '*'
+    peerDependenciesMeta:
+      react-dom:
+        optional: true
+      react-native:
+        optional: true
+    dependencies:
+      '@babel/runtime': 7.14.8
+      '@types/react-redux': 7.1.18
+      hoist-non-react-statics: 3.3.2
+      loose-envify: 1.4.0
+      prop-types: 15.7.2
+      react: 17.0.2
+      react-dom: 17.0.2_react@17.0.2
+      react-is: 16.13.1
     dev: false
 
   /react-refresh/0.10.0:
